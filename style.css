@@ -1,5 +1,7 @@
 :root {
   --border-color: #000;
+  --prim-color: rgb(217, 215, 215);
+  --un-prim-color: #000;
 }
 
 html,
@@ -194,6 +196,24 @@ form .form_button button {
   cursor: pointer;
 }
 
+#calculator table {
+  width: 100%;
+}
+
+#calculator table tr td {
+  padding: 8px;
+  margin: 8px;
+  text-align: center;
+  background-color: var(--prim-color);
+  color: var(--un-prim-color);
+  cursor: pointer;
+}
+
+#calculator table tr td:hover {
+  color: var(--prim-color);
+  background-color: var(--un-prim-color);
+}
+
 @media (min-width: 800px) {
   form > div {
     display: grid;
@@ -209,6 +229,8 @@ form .form_button button {
 @media (prefers-color-scheme: dark) {
   :root {
     --border-color: #fff;
+    --prim-color: #000;
+    --un-prim-color: rgb(217, 215, 215);
   }
 
   body {
